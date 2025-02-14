@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To the Moon and Back</title>
+    <style>
+        body {
+            font: Verdana;
+            margin: 20px;
+            padding: 0;
+            text-align: center;
+            color: white;
+            
+            background-attachment: fixed;
+            background-size: contain;
+            background-image:linear-gradient(rgba(0, 0, 0, 0.200),rgba(0, 0, 0, 0.200)),url(finalback.jpg);
+            
+
+        }
+        
+        h1 {
+            font-family: Arial, Helvetica, sans-serif;
+            color:rgb(233, 223, 223);
+            margin-top:80px;
+            font-size: 120px;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 20px;
+           
+        }
+
+        .image-container img {
+            width: 300px;
+            height: 413px;
+            border-radius: 20px;
+            border: #fff;
+            box-shadow: #fff;
+            margin: 40px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        .image-container img:hover {
+            transform: scale(1.2);
+            cursor: pointer;
+        }
+        .message-page {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color:black;
+            box-shadow: 0 -1px 10px rgba(0, 0, 0, 0.1);
+            z-index: 2;
+            transition: ease-in 4s;
+        }
+
+        .message {
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            max-width: 600px;
+            margin: auto;
+        }
+
+        .message h2 {
+            color: #e6005c;
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .message p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #667;
+        }
+
+        .back-button {
+            margin-top: 20px;
+            padding: 15px 30px;
+            font-size: 18px;
+            background-color:#70696c ;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background-color 0.3s;
+            cursor: pointer;
+        }
+
+        .back-button:hover {
+            background-color:#e6005c ;
+       
+        }
+    </style>
+</head>
+<body>
+
+    <h1>I love you to the moon and back Zo </h1>
+
+    <div class="image-container">
+        <div class="image" data-message="message1">
+            <img src="Zo1.jpg" alt="Partner Image 1">
+        </div>
+        <div class="image" data-message="message2">
+            <img src="Zo2.jpg" alt="Partner Image 2">
+        </div>
+        <div class="image" data-message="message3">
+            <img src="Zo3.jpg" alt="Partner Image 2">
+        </div>
+        <div class="image" data-message="message4">
+            <img src="Zo5.jpg" alt="Partner Image 2">
+        </div>
+        <div class="image" data-message="message5">
+            <img src="zo6.jpg" alt="Partner Image 2">
+        </div>
+        <!-- Add more images as needed -->
+    </div>
+
+    <div id="message1" class="message-page">
+        <div class="message">
+            <h2>You are beautiful</h2>
+            <p>
+                I often tell you how beautiful your eyes are. It seems that whenever I look 
+                into them , I find something more beautiful to admire than the last. 
+                The flawless workmanship of GOD.
+                Songs of Solomon 4:7
+            </p>
+            <a href="#" class="back-button">Back to Gallery</a>
+        </div>
+    </div>
+
+    <div id="message2" class="message-page">
+        <div class="message">
+            <h2>You are smart </h2>
+            <p>
+                Every time you speak I find something to learn , some way to grow. 
+                You know what to say , when to say it. I love every second I manage to get to speak to you.
+                Proverbs 31:26
+            </p>
+            <a href="#" class="back-button">Back to Gallery</a>
+        </div>
+    </div>
+    <div id="message3" class="message-page">
+        <div class="message">
+            <h2>You are amazing</h2>
+            <p>
+                I will continue to say that you were one of the best things to have happened to me. 
+                I cherish every moment I have with you.You are truly precious. I love you. Uyisthandwa sami esihle.
+
+                Proverbs 31:10
+
+            </p>
+            <a href="#" class="back-button">Back to Gallery</a>
+        </div>
+    </div>
+    <div id="message4" class="message-page">
+        <div class="message">
+            <h2>Did I mention that you're drop dead gorgeous</h2>
+            <p>
+                I can talk all day about that smile that continues to bring joy into my heart but I'd 
+                rather you know that your beauty transcends far beyond the external.You're beautiful from the inside out.
+                It's my favourite thing about you. 
+                1 Peter 3:3-4
+            </p>
+            <a href="#" class="back-button">Back to Gallery</a>
+        </div>
+    </div>
+    <div id="message5" class="message-page">
+        <div class="message">
+            <h2>You are one of a kind</h2>
+            <p>
+                It continues to amaze me whenever I think about the day I met you.
+                I would have never thought that I would meet somebody quite like you. 
+                Someone with such awkward humour and a cackle that she calls a laugh.
+                Somebody who continues to show up for everybody she comes across.
+                Somebody whom I love deeply. 
+                Phillipians 1:3
+                
+            </p>
+            <a href="#" class="back-button">Back to Gallery</a>
+        </div>
+    </div>
+    
+
+    <!-- Add more message pages as needed -->
+
+    <script>
+        document.querySelectorAll('.image').forEach(image => {
+            image.addEventListener('click', function () {
+                const targetMessage = this.getAttribute('data-message');
+                document.getElementById(targetMessage).style.display = 'block';
+            });
+        });
+
+        document.querySelectorAll('.back-button').forEach(button => {
+            button.addEventListener('click', function (event) {
+                event.preventDefault();
+                document.querySelectorAll('.message-page').forEach(page => {
+                    page.style.display = 'none';
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
